@@ -1,0 +1,22 @@
+~~~JSON
+{
+	"windowTitle": "Kiwi IRC - The web IRC client",
+	"startupScreen": "customServer",
+	"kiwiServer": "http://example.com/webirc/kiwiirc/",
+	"restricted": false,
+	"theme": "default",
+	"themes": [
+		{ "name": "Default", "url": "static/themes/default.css" }
+	],
+	"startupOptions" : {
+		"server": "irc.freenode.net",
+		"port": 6697,
+		"tls": true,
+		"channel": "",
+		"nick": ""
+	},
+	"embedly": {
+		"key": ""
+	}
+}
+~~~
