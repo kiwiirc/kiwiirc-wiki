@@ -28,72 +28,86 @@ Config options are put into JSON format using a plain object. Example: `{"option
 
 A full config example mentioning most of the following options can be found [[here|Configuration-Example]]
 
-* `windowTitle` ("My IRC network")
+##### `windowTitle`
+Example: "My IRC network"
 
-  The title of the webpage. This appears in the browser tab and bookmark managers when bookmarked.
+The title of the webpage. This appears in the browser tab and bookmark managers when bookmarked.
 
-* `startupScreen` ("customServer")
+##### `startupScreen`
+Example: "customServer"
 
-  The screen that is first shown. More information on this can be found [[here|startup-screens]]
+The screen that is first shown. More information on this can be found [[here|startup-screens]]
 
-* `kiwiServer` ("http://example.com/config.json")
+##### `kiwiServer`
+Example: "http://example.com/config.json"
 
-  The URL to your kiwi server. More information on this can be found [[here|kiwi-server]]
+The URL to your kiwi server. More information on this can be found [[here|kiwi-server]]
 
-* `restricted` (`true` or `false`)
+##### `restricted`
+Example: `true` or `false`
 
-  If set to `true`, Kiwi IRC will only be allowed to connect to the network that you specify.
+If set to `true`, Kiwi IRC will only be allowed to connect to the network that you specify.
 
-* `themes` (Array / list of available themes)
+##### `themes`
+The themes listed here will be available in the client. There must be at least one theme here.
+Example:
+~~~json
+[
+  { "name": "Default", "url": "static/themes/default.css" },
+  { "name": "Theme2", "url": "static/themes/theme2.css" },
+  { "name": "Other Theme", "url": "http://example.com/theme.css" }
+]
+~~~
 
-  The themes listed here will be available in the client. There must be at least one theme here. Example:
-  ~~~json
-  [
-    { "name": "Default", "url": "static/themes/default.css" },
-    { "name": "Theme2", "url": "static/themes/theme2.css" },
-    { "name": "Other Theme", "url": "http://example.com/theme.css" }
-  ]
-  ~~~
+##### `theme`
+Example: "default"
 
-* `theme` ("default")
+The name of the default theme to use. This name must be in the available themes list.
 
-  The name of the default theme to use. This name must be in the available themes list.
+##### `embedly.key`
+Example: "embedly API key"
 
-* `embedly.key` ("embedly API key")
+Kiwi IRC uses the embedly service to show a preview of links directly within the client. If you have an embedly API key to custom the previews or remove its branding, you can enter your API key here.
 
-  Kiwi IRC uses the embedly service to show a preview of links directly within the client. If you have an embedly API key to custom the previews or remove its branding, you can enter your API key here.
+##### `startupOptions`
+Object / configuration for the first screen of the client. Eg. the connection screen
 
-* `startupOptions` (Object / configuration for the first screen of the client. Eg. the connection screen)
+##### `startupOptions.server`
+Example: "irc.freenode.net"
 
-* `startupOptions.server` ("irc.freenode.net")
+This will be the default IRC server the client will connect to. May be left empty to force the user to enter a server.
 
-  This will be the default IRC server the client will connect to. May be left empty to force the user to enter a server.
+##### `startupOptions.port`
+Example: 6667
 
-* `startupOptions.port` (6667)
-
-  This will be the default port for the IRC server the client will connect to. By default it uses 6667, or 6697 if using SSL/TLS.
-
-
-* `startupOptions.tls` (`true` or `false`)
-
-  If set to `true`, Kiwi IRC will enable SSL/TLS by default for the IRC server connection. If set to `false`, an un-secure plain-text connection will be used.
-
-
-* `startupOptions.direct` (`true` or `false`)
-
-  Kiwi IRC supports connecting directly to IRC servers that support websockets. Setting this to `true` will connect directly instead of using a Kiwi server. (Note: this may be more unstable depending on the users browser, network, anti virus, proxies, amongst other situations)
-
-
-* `startupOptions.channel` ("#channel,#channel2")
-
-  This will be the default channel that the client will automatically join.
+This will be the default port for the IRC server the client will connect to. By default it uses 6667, or 6697 if using SSL/TLS.
 
 
-* `startupOptions.nick` ("a_nick")
+##### `startupOptions.tls`
+Example: `true` or `false`
 
-  This will be the default nick that the client will use. A `?` character may be used to specify a random number to help reduce conflicting nicks.
+If set to `true`, Kiwi IRC will enable SSL/TLS by default for the IRC server connection. If set to `false`, an un-secure plain-text connection will be used.
 
 
-* `startupOptions.state_key` ("kiwi-state")
+##### `startupOptions.direct`
+Example: `true` or `false`
 
-  The state key is the name for the user session. The default is "kiwi-state". Users IRC connections and channels will be remembered in their browser for the next time they open the webpage. If set to an empty string (`""`) then nothing will be remembered.
+Kiwi IRC supports connecting directly to IRC servers that support websockets. Setting this to `true` will connect directly instead of using a Kiwi server. (Note: this may be more unstable depending on the users browser, network, anti virus, proxies, amongst other situations)
+
+
+##### `startupOptions.channel`
+Example: "#channel,#channel2"
+
+This will be the default channel that the client will automatically join.
+
+
+##### `startupOptions.nick`
+Example: "a_nick"
+
+This will be the default nick that the client will use. A `?` character may be used to specify a random number to help reduce conflicting nicks.
+
+
+##### `startupOptions.state_key`
+Example: "kiwi-state"
+
+The state key is the name for the user session. The default is "kiwi-state". Users IRC connections and channels will be remembered in their browser for the next time they open the webpage. If set to an empty string (`""`) then nothing will be remembered.
