@@ -26,6 +26,8 @@ Loads the JSON file from `static/config.json`
 
 Config options are put into JSON format using a plain object. Example: `{"option1": "value", "option2": "value"}`
 
+A full config example mentioning most of the following options can be found [[here|Configuration-Example]]
+
 * `windowTitle` ("My IRC network")
 
   The title of the webpage. This appears in the browser tab and bookmark managers when bookmarked.
