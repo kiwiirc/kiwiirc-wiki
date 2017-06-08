@@ -1,4 +1,4 @@
-Config is a JSON object loaded before Kiwi IRC starts. If a config cannot be found or an error loading it occurs, an error message will be displayed on the page and the client will not start.
+The client configuration is a JSON object loaded before Kiwi IRC starts. If a config cannot be found or an error loading it occurs, an error message will be displayed on the page and the client will not start.
 
 ## Loading the config file
 
