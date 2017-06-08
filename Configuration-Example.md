@@ -1,3 +1,5 @@
+Below is a complete example of configuration that Kiwi IRC expects. More information can be found on the [[Configuration]] page.
+
 ~~~JSON
 {
 	"windowTitle": "Kiwi IRC - The web IRC client",
