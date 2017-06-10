@@ -59,6 +59,8 @@ Example:
 ]
 ~~~
 
+If you add a theme named `custom`, this will allow the user to temporarily set their own theme URL. Handy for designers and trying out different themes.
+
 ##### `theme`
 Example: "default"
 
