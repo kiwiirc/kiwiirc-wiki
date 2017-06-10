@@ -6,7 +6,7 @@ A theme is a folder containing a file called `theme.css`. This may be placed any
 
 - Copy an existing theme folder from `static/themes/` and name it however you like. For example, `mytheme`.
 - Edit the `mytheme/theme.css` file with your theme styles.
-- Add the theme to your config file [as shown here](https://github.com/kiwiirc/kiwiirc/wiki/Configuration#themes)
+- Add the theme to your config file [as shown here].(https://github.com/kiwiirc/kiwiirc/wiki/Configuration#themes) or share the link to others to try out.
 
 Once these 2 steps are completed, refresh Kiwi IRC in your browser and you should now see your theme in the themes list in the settings window.
 
