@@ -49,13 +49,13 @@ Example: `true` or `false`
 If set to `true`, Kiwi IRC will only be allowed to connect to the network that you specify.
 
 ##### `themes`
-The themes listed here will be available in the client. There must be at least one theme here.
+The themes listed here will be available in the client. There must be at least one theme here. The URL should only point to the folder of your theme that contains your `theme.css` file.
 Example:
 ~~~json
 [
-  { "name": "Default", "url": "static/themes/default.css" },
-  { "name": "Theme2", "url": "static/themes/theme2.css" },
-  { "name": "Other Theme", "url": "http://example.com/theme.css" }
+  { "name": "Default", "url": "static/themes/default/" },
+  { "name": "Theme2", "url": "static/themes/theme2/" },
+  { "name": "Other Theme", "url": "http://example.com/kiwi_theme/" }
 ]
 ~~~
 
