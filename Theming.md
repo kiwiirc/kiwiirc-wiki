@@ -2,7 +2,7 @@
 Kiwi IRC supports being themed by a CSS file and being changed at runtime. This gives you full access to modify colours, paddings, margins, etc. The core client layout is handled for you internally so you only need to think about the looks you want.
 
 ## Creating a theme
-A theme is a folder named as your theme name, containing a file called `theme.css`. This may be placed anywhere on the web or in the `static/themes/` folder within Kiwi IRC. To create your own theme:
+A theme is a folder containing a file called `theme.css`. This may be placed anywhere on the web or in the `static/themes/` folder within Kiwi IRC. To create your own theme:
 
 - Copy an existing theme folder from `static/themes/` and name it however you like. For example, `mytheme`.
 - Edit the `mytheme/theme.css` file with your theme styles.
