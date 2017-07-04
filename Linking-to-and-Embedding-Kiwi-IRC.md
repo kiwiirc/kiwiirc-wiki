@@ -55,6 +55,6 @@ to the end of the URL and then adding any of the following:
 ## ZNC support
 Running a ZNC host or just want a fancy bookmark to your own ZNC server? Then you can simply add the `type=znc` option to your Kiwi URL. This will prompt you for your ZNC password - it is not stored in the URL or browser.
 
-`https://kiwiirc.com/nextclient/#irc://znc.server.com/?type=znc&nick=username&network=networkname`
+https://kiwiirc.com/nextclient/#irc://znc.server.com/?type=znc&nick=username&network=networkname
 
 Using an older version of ZNC that does not support multiple networks per user? Set network to an underscore, "_".
