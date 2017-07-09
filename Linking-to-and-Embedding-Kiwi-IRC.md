@@ -57,4 +57,4 @@ Running a ZNC host or just want a fancy bookmark to your own ZNC server? Then yo
 
 https://kiwiirc.com/nextclient/#irc://znc.server.com/?type=znc&nick=username&network=networkname
 
-Using an older version of ZNC that does not support multiple networks per user? Set network to an underscore, "_".
+If you are running an older version of ZNC that does not support multiple networks per user then set `network` to an underscore, `_`.
