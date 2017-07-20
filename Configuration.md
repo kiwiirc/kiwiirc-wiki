@@ -109,6 +109,12 @@ Example: "a_nick"
 This will be the default nick that the client will use. A `?` character may be used to specify a random number to help reduce conflicting nicks.
 
 
+##### `startupOptions.autoConnect`
+Example: `true` or `false`
+
+If using the `welcome` startup screen, this will tell the client to automatically connect with the connection settings you have given.
+
+
 ##### `startupOptions.state_key`
 Example: "kiwi-state"
 
