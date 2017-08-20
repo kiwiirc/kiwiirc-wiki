@@ -6,6 +6,9 @@ A config can be loaded from a number of places depending on which best suits you
 
 The following locations are checked in order.
 
+### Use a javascript function
+The javascript function `window.kiwiConfig` is checked before anything else. If it exists, it will be called and the return value should be the config object - exactly the same as the config.json structure.
+
 ### Specify a URL location
 You can specify the URL to your JSON config file in a meta tag named `kiwiconfig` on the client page (index.html). Example: `<meta name="kiwiconfig" content="http://example.com/path/to/config.json">`
 
