@@ -1,4 +1,4 @@
-***This page needs typing up properly***
+***Note: This page needs typing up properly***
 
 Quick and dirty overview. Select the best scenario below, and enter that startup screen name into your config.json like so: `"startupScreen": "welcome"`
 
