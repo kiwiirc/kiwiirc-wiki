@@ -10,3 +10,6 @@ For public gateways that let users connect to any IRC network. A full irc:// URI
 
 ### personal screen
 The personal screen makes it act like a personal IRC client, in that it lets you connect anywhere and remembers your networks for next time you load the page.
+
+### znc
+For hosts that provide a ZNC service or just as a frontend to your self hosted ZNC instance, the znc startup screen provides a simplified username, password, and optional network box that logs into your ZNC instance.
