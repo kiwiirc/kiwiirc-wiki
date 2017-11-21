@@ -20,6 +20,7 @@ For this guide, we want this server available at chat.example.com, port 80 which
 Once you are happy with your settings, you can now restart the server via 'service kiwiirc restart' for the settings to take effect.
 
 **Security considerations**
+
 By default, anyone can connect to your server from any website. In most cases this will be undesirable as it opens your server up for abuse. E.g. Someone may put their own version of Kiwi IRC on a popular website that auto connects to your server causing a flood of spam.
 
 To work around this, the sever allows you to whitelist specific websites that may connect to your server. This makes use of the browser "Origin" headers that all browsers use today.
