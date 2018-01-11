@@ -122,3 +122,9 @@ If using the `welcome` startup screen, this will tell the client to automaticall
 Example: "kiwi-state"
 
 The state key is the name for the user session. The default is "kiwi-state". Users IRC connections and channels will be remembered in their browser for the next time they open the webpage. If set to an empty string (`""`) then nothing will be remembered.
+
+
+##### `startupOptions.remember_buffers`
+Example: `true` or `false`
+
+When the user session is saved via `startupOptions.state_key` only the user settings are saved. Set this option to true to also save the users networks and channels.
