@@ -87,12 +87,15 @@ Example: 6667
 
 This will be the default port for the IRC server the client will connect to. By default it uses 6667, or 6697 if using SSL/TLS.
 
-
 ##### `startupOptions.tls`
 Example: `true` or `false`
 
 If set to `true`, Kiwi IRC will enable SSL/TLS by default for the IRC server connection. If set to `false`, an un-secure plain-text connection will be used.
 
+##### `startupOptions.password`
+Example: "mypassword"
+
+This is the password sent to the IRC server using `PASS`.
 
 ##### `startupOptions.direct`
 Example: `true` or `false`
