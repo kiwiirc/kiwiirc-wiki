@@ -21,7 +21,7 @@ kiwi.plugin('plugin_name', function(kiwi, log) {
 
 Your plugin function will be called once Kiwi IRC has been loaded and ready to start. You can listen for events and use any of the below API in your plugin.
 
-As a very simple example, this plugin will listen for nay new networks being created and set the default server address to `irc.freenode.net`:
+As a very simple example, this plugin will listen for any new networks being created and set the default server address to `irc.freenode.net`:
 
 ~~~javascript
 kiwi.plugin('plugin_name', function(kiwi) {
@@ -88,4 +88,50 @@ getBuffersWithUser(networkid, nick)
 changeUserNick(networkid, oldNick, newNick)
 
 getStartups()
+~~~
+
+
+### kiwi.state events
+*Note: This list still needs parsing correctly*
+~~~
+'document.clicked', event
+'document.keydown', event
+'active.component'
+'statebrowser.toggle'
+'sidebar.toggle'
+'sidebar.hide'
+'sidebar.show'
+'network.settings', network
+'input.raw', ircText
+'input.raw', msg
+'mediaviewer.hide'
+'mediaviewer.opened'
+'mediaviewer.show', url
+'userbox.show', user,
+'mediaviewer.show', url
+'active.component'
+'userbox.show', user,
+'network.settings', network
+'statebrowser.show'
+'network.settings', network
+'active.component', AppSettings
+'active.component', null
+'network.settings', network
+'active.component', tab.component, tab.props
+'active.component', null
+'input.command.' + command, eventObj, command, params
+'network.connecting', { network }
+'irc:raw', command, event, network
+'irc:' + command, event, network, ircEventObj
+'input.raw', line[0] === '/' ? line : `/${line}`
+'network.new', eventObj
+'network.removed', eventObj
+'buffer.new', eventObj
+'buffer.close', eventObj
+'server.tab.show', tabName
+'theme.change'
+'theme.change'
+'theme.change'
+'network.settings', network
+'statebrowser.show'
 ~~~
