@@ -19,6 +19,7 @@ Below is a complete example of configuration that Kiwi IRC expects. More informa
 	},
 	"embedly": {
 		"key": ""
-	}
+	},
+	"plugins": []
 }
 ~~~
