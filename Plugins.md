@@ -25,7 +25,7 @@ As a very simple example, this plugin will listen for any new networks being cre
 
 ~~~javascript
 kiwi.plugin('plugin_name', function(kiwi) {
-    kiwi.state.$on('network.new', function(event) {
+    kiwi.on('network.new', function(event) {
         event.network.connection.server = 'irc.freenode.net';
         event.network.connection.port = 6667;
     });
@@ -94,7 +94,7 @@ getStartups()
 
 
 ### kiwi.state events
-These events can be listened for via `kiwi.state.$on('event.name', function() {})`. For events marked that they can be fired from plugins, you may do so via `kiwi.state.$emit('event.name', arg1, arg2)`.
+These events can be listened for via `kiwi.on('event.name', function() {})`. For events marked that they can be fired from plugins, you may do so via `kiwi.emit('event.name', arg1, arg2)`.
 
 | Name | Arguments | Can be fired from plugins | Description |
 | --- | --- | --- | --- |
