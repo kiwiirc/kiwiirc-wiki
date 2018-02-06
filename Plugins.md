@@ -98,8 +98,8 @@ These events can be listened for via `kiwi.on('event.name', function() {})`. For
 
 | Name | Arguments | Can be fired from plugins | Description |
 | --- | --- | --- | --- |
-| `document.clicked` | mouseEvent | no | The page has its `click` event triggered |
-| `document.keydown` | mouseEvent | no | The page has its `keydown` event triggered |
+| `document.clicked` | MouseEvent | no | The page has its `click` event triggered |
+| `document.keydown` | KeyboardEvent | no | The page has its `keydown` event triggered |
 | `active.component` | VueComponent | yes | Set the active component in the main view |
 | `statebrowser.toggle` | | yes | Hide / Show the state browser |
 | `statebrowser.hide` | | yes | Hide the state browser |
