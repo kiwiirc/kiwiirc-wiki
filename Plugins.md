@@ -96,7 +96,7 @@ getStartups()
 ### kiwi.state events
 These events can be listened for via `kiwi.state.$on('event.name', function() {})`. For events marked that they can be fired from plugins, you may do so via `kiwi.state.$emit('event.name', arg1, arg2)`.
 
-| Event name | Event arguments | Can be fired from plugins | Description
+| Name | Arguments | Can be fired from plugins | Description |
 | --- | --- | --- | --- |
 | `document.clicked` | mouseEvent | no | The page has its `click` event triggered |
 | `document.keydown` | mouseEvent | no | The page has its `keydown` event triggered |
