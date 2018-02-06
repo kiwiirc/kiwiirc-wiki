@@ -25,10 +25,10 @@ As a very simple example, this plugin will listen for any new networks being cre
 
 ~~~javascript
 kiwi.plugin('plugin_name', function(kiwi) {
-	kiwi.state.$on('network.new', function(event) {
-		event.network.connection.server = 'irc.freenode.net';
-		event.network.connection.port = 6667;
-	});
+    kiwi.state.$on('network.new', function(event) {
+        event.network.connection.server = 'irc.freenode.net';
+        event.network.connection.port = 6667;
+    });
 });
 ~~~
 
