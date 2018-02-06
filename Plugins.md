@@ -93,17 +93,19 @@ getStartups()
 
 ### kiwi.state events
 *Note: This list still needs parsing correctly*
-~~~
-'document.clicked', event
-'document.keydown', event
-'active.component'
-'statebrowser.toggle'
+
+| Event name | Event arguments | Can be fired from plugins | Description
+| --- | --- | --- | --- |
+| `document.clicked` | mouseEvent | no |
+| `document.keydown` | mouseEvent | no |
+| `active.component` | VueComponent | yes | Set the active component in the main view
+| `statebrowser.toggle` | | yes | Hide / Show the state browser |
+
 'sidebar.toggle'
 'sidebar.hide'
 'sidebar.show'
 'network.settings', network
 'input.raw', ircText
-'input.raw', msg
 'mediaviewer.hide'
 'mediaviewer.opened'
 'mediaviewer.show', url
