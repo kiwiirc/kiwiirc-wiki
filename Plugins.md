@@ -114,8 +114,9 @@ These events can be listened for via `kiwi.on('event.name', function() {})`. For
 | `mediaviewer.show` | url | yes | Open the media viewer with the given URL |
 | `mediaviewer.opened` | | no | Media viewer has been opened |
 | `userbox.show` | user | yes | Open the user information panel for the given user |
-| `irc:raw` | command, event, network | no | Raw IRC line from the IRC server |
-| `irc:[command]` | event, network, ircEventObj | no | A parsed IRC message from the IRC server |
+| `irc.raw` | command, event, network | no | Raw IRC message from the IRC server |
+| `irc.raw.[command]` | command, event, network | no | A raw IRC message from the IRC server |
+| `irc.[command]` | event, network, ircEventObj | no | A parsed IRC event from the IRC library |
 | `network.new` | eventObj | no | A new network has been added |
 | `network.removed` | eventObj | no | A network has been deleted |
 | `network.connecting` | eventObj | no | A network connection is about to start |
