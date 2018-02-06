@@ -1,4 +1,4 @@
-*Note: Plugins are currently experimental and may change at any point!*
+*Note: This is a living and breathing document. It is still changing and being completed*
 
 This document briefly outlines how to create, register and make use of plugins. Further in depth descriptions will be included once the API has been officially implemented.
 
