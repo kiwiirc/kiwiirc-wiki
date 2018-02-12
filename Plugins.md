@@ -124,3 +124,4 @@ These events can be listened for via `kiwi.on('event.name', function() {})`. For
 | `buffer.close` | eventObj | no | A buffer has been closed |
 | `server.tab.show` | tabName | yes | When a server buffer is open, show the given tab |
 | `theme.change` | | yes | Notify the application that the theme has been changed |
+| `message.render` | eventObj | no | A message is about to be rendered |
