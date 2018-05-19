@@ -15,11 +15,11 @@ Notice the `irc://...` comes *after* a `#` character. That is important for your
 
 * irc.freenode.net on port 6697 with SSL, channel #kiwiirc
 
-  > https://kiwiirc.com/nextclient/#irc://irc.freenode.net:+6667/#kiwiirc
+  > https://kiwiirc.com/nextclient/#irc://irc.freenode.net:+6697/#kiwiirc
 
 * irc.freenode.net on port 6697 with SSL, multiple channels
 
-  > https://kiwiirc.com/nextclient/#irc://irc.freenode.net:+6667/#kiwiirc,#freenode
+  > https://kiwiirc.com/nextclient/#irc://irc.freenode.net:+6697/#kiwiirc,#freenode
 
 A few notes:
 * If not set, the default port is 6667. If using SSL, 6697.
