@@ -131,3 +131,27 @@ The state key is the name for the user session. The default is "kiwi-state". Use
 Example: `true` or `false`
 
 When the user session is saved via `startupOptions.state_key` only the user settings are saved. Set this option to true to also save the users networks and channels.
+
+
+##### `startupOptions.greetingText`
+Example: "Hello!"
+
+The header that is shown on the startup page. HTML may also be used here.
+
+
+##### `startupOptions.buttonText`
+Example: "Start"
+
+The text that is shown on the connect button on the startup page. HTML may also be used here.
+
+
+##### `startupOptions.infoContent`
+Example: "Welcome to my network! Please visit my homepage for help."
+
+The HTML content that is shown on the right side of the startup page.
+
+
+##### `startupOptions.infoBackground`
+Example: "/info_background.jpg"
+
+The background image for the right side of the startup page.
