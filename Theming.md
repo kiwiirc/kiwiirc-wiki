@@ -47,3 +47,11 @@ There are some hidden ways to style specific parts of the interface.
     margin-right: 5px;
 }
 ~~~
+
+#### Styling the application depending on the active channel or buffer
+~~~css
+/* Add a `?` background image when in a help channel */
+.kiwi-wrap[data-activebuffer="#help"] .kiwi-workspace-background {
+    background-image: url(big_questionmark.png);
+}
+~~~
