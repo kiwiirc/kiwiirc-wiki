@@ -24,7 +24,7 @@ If you're unsure which CSS classes to be styling, you can use your browsers deve
 There are some hidden ways to style specific parts of the interface.
 #### Styling messages from a specific user
 ~~~css
-/* Change all a users messages to red */
+/* Change all of a users messages to red */
 .kiwi-messagelist-message[data-nick="a_user"] {
     color: red;
     font-weight: bold;
