@@ -1,14 +1,16 @@
-***Note: In progress***
+:toc:
 
-# General Settings
+*_Note: In progress_*
+
+= General Settings
 These are the top level settings of the configuration object.
 
-### language
+=== language
 The default language to display the client in. If set to `false`, the language will be automatically determined from the users browser.
 
 E.g. `"language": "es-es"`
 
-### plugins
+=== plugins
 An array of plugins to load into the client. These are loaded when the page loads and Kiwi is ready to start.
 
 E.g.
@@ -18,22 +20,22 @@ E.g.
         {“name”: “my_second_plugin”, “url”: ”https://url/plugin2.js”}]
     ]
 
-### windowTitle
+=== windowTitle
 The title of the Kiwi webpage.
 
 E.g. `”windowTitle”: ”Kiwi IRC”`
 
-### useMonospace
+=== useMonospace
 Traditionally IRC clients use mono space fonts but more modern clients are starting to use other style fonts instead. Set this to true to enable monospace fonts if the theme supports it.
 
 E.g. `”useMonospace”: true`
 
-### theme
+=== theme
 The name of the default theme. This theme must exist in the available themes.
 
 E.g. `”theme”: “Default”`
 
-### themes
+=== themes
 The list of available themes that are available to the client.
 
 E.g.
@@ -43,7 +45,7 @@ E.g.
         {“name”: “Dark”, “url”: “static/themes/dark”}
     ]
 
-### restricted
+=== restricted
 Setting this to true restricts the client to connect only to the IRC server you configure.
 Effects:
 * No extra networks can be added to the client by the user
@@ -51,18 +53,18 @@ Effects:
 
 E.g. `”restricted”: true`
 
-### hide_advanced
+=== hide_advanced
 Setting this to true will hide the advanced settings button from the settings screen. Only the basic settings will be available to the user.
 
 E.g. `"hide_advanced": false`
 
-### startupScreen
+=== startupScreen
 The name of the default startup screen. This is the first screen that the user sees on opening the client. Some are better suited for single IRC networks while others may be better suited for bouncer login interfaces.
 More information on startup screens can be found here (TODO: link to startup screen info)
 
 E.g. `”startupScreen”: “welcome”`
 
-### kiwiServer
+=== kiwiServer
 The URL to your kiwi server, or sometimes called the webircgateway server.
 This URL can either be relative to the client page or an absolute URL. However, if using a different host name or port than the client page then you must remember to whitelist the client address in the server config.
 
@@ -70,32 +72,32 @@ Additional note; This must be the direct path to the kiwiirc endpoint of the ser
 
 E.g. `”kiwiServer”: ”https://webirc.example.com/webirc/kiwiirc/”`
 
-### warnOnExit
+=== warnOnExit
 If enabled, the client will show a prompt to the user asking if they wanted to close the page when they try to do so. This prevents accidental page refreshes and getting disconnected from the IRC network.
 
 E.g. `”warnOnExit”: true`
 
-### showAutoComplete
+=== showAutoComplete
 If enabled, an autocomplete box will appear on pressing tab to auto complete nicknames, commands, and channels. Pressing the @ key also open the autocomplete box for nicknames.
 
 E.g. `”showAutoComplete”: true`
 
-### showSendButton
+=== showSendButton
 If enabled, the send message button will be shown allowing the user to click a button to send a message. This button is shown automatically on touch screen devices in either case.
 
 E.g. `”showSendButton”: false`
 
-### sidebarPinned
+=== sidebarPinned
 If enabled, the sidebar that contains the nicklist will be pinned open by default.
 
 E.g. `”sidebarPinned”: false`
 
-### aliases
+=== aliases
 Aliases allow you to create custom IRC commands that alias another or chain multiple together with pre-set variables. (TODO: link to dedicated page on aliases)
 
 E.g. `”aliases”: “/p /part $1”`
 
-### emojis
+=== emojis
 An object to replace emoticon strings with emoji characters. The emoji character is represented by its Unicode value.
 
 E.g.
@@ -105,12 +107,12 @@ E.g.
         “:-D”: “1f605”
     }
 
-### emojiLocation
+=== emojiLocation
 The base URL to find the emoji images. The emoji Unicode characters will be appended to the URL followed by `.png`.
 
 E.g. `”emojiLocation”: “https://kiwiirc.com/shared/emoji”`
 
-### presetNetworks
+=== presetNetworks
 A list of networks to show the user in the client when the user adds a new network. This will enter the server, port and any TLS option to the network.
 
 E.g.
@@ -120,7 +122,7 @@ E.g.
         { “name”: “dalnet”, “server”: “irc.dal.net”, “port”: 6667, “tls”: false }
     ]
 
-### embedly
+=== embedly
 When previewing links in the client it can optionally use embedly to embed any media links such as YouTube videos, soundcloud tracks and pastebin snippets. You may provide an embedly API key to remove any branding from the page.
 See www.embedly.com for more information on this.
 
@@ -136,7 +138,7 @@ E.g.
         ...
     }
 
-### messageLayout
+=== messageLayout
 The default layout for buffers. Traditional IRC clients are more compact and less visual, while a more modern client may be more spacious and easier to read to the general public.
 Available options:
 * `compact`
@@ -144,7 +146,7 @@ Available options:
 
 E.g. `”messageLayout”: “compact”`
 
-### alert_on
+=== alert_on
 When the user should be alerted on receiving a message.
 Available options:
 * `message` alert on every message.
@@ -153,97 +155,97 @@ Available options:
 
 E.g. `”alert_on”: “highlight”`
 
-### timestamp_format
+=== timestamp_format
 The format of the timestamps shown next to a message. More information on these formats can be found here (TODO: link or type up the format options)
 
 E.g. `”timestamp_format”: “%H:%M:%S”`
 
-### timestamp_full_format
+=== timestamp_full_format
 Like the `timestamp_format` option but when a full date and time is needed. If set to false the browsers default format will be used, using the users default locale.
 
 E.g. `”timestamp_full_format”: false`
 
-### show_timestamps
+=== show_timestamps
 If enabled, the time when a message was received will be shown.
 
 E.g. `“show_timestamps”: true`
 
-### scrollback_size
+=== scrollback_size
 The number of messages to keep in the window. The higher this number, the more memory will be used in the browser.
 
 E.g. `”scrollback_size”: 250`
 
-### show_joinparts
+=== show_joinparts
 If enabled, show when users join or leave a channel.
 
 E.g. `”show_joinparts”: true`
 
-### show_topics
+=== show_topics
 If enabled, show the new topic as a message when a channel topic changes.
 
 E.g. `”show_topics”: true`
 
-### show_nick_changes
+=== show_nick_changes
 If enabled, show when users change their nickname as a message.
 
 E.g. `”show_nick_changes”: true`
 
-### show_mode_changes
+=== show_mode_changes
 If enabled, show channel mode changes as a message when they change.
 
 E.g. `”show_mode_changes”: true`
 
-### traffic_as_activity
+=== traffic_as_activity
 If enabled, include traffic messages (joins, parts, quits) in the unread message counters.
 
 E.g. `”traffic_as_activity”: false,`
 
-### coloured_nicklist
+=== coloured_nicklist
 If enabled, the nicklist will show user nicknames in the colour that has been auto generated for them. Otherwise they will show under a single colour set by the theme.
 
 E.g. `”coloured_nicklist”: true`
 
-### colour_nicknames_in_messages
+=== colour_nicknames_in_messages
 If enabled, highlight nicknames found in messages with the colour they have been auto generated with.
 
 E.g. `”colour_nicknames_in_messages”: true`
 
-### block_pms
+=== block_pms
 If enabled, users will not receive private messages unless they have sent a private message to the sender first.
 
 E.g. `”block_pms”: false`
 
-### show_emoticons
+=== show_emoticons
 If enabled, emojis and simple emoticon characters such as `:)` will be replaced with images.
 
 E.g. `”show_emoticons”: true`
 
-### extra_formatting
+=== extra_formatting
 If enabled, basic markdown will be supported in messages.
 
 E.g. `”extra_formatting”: true`
 
-### mute_sound
+=== mute_sound
 If enabled, sounds will be muted when an alert is shown.
 
 E.g. `”mute_sound”: false`
 
-### hide_message_counts
+=== hide_message_counts
 If enabled, unread message counters next to the channel names will be hidden.
 
 E.g. `”hide_message_counts”: false`
 
-### default_ban_mask
+=== default_ban_mask
 The default user mask to use when banning a user. `%n`, `%i` and `%h` will be replaced with the selected users nick, ident and hostname respectively.
 
 E.g. `”default_ban_mask”: “*!%i@%h”`
 
-### default_kick_reason
+=== default_kick_reason
 The default reason to give to a user if you kick them from a channel without one specified.
 
 E.g. `”default_kick_reason”: “Your behavior is not conducive to the desired environment.”`
 
-### shared_input
+=== shared_input
 If enabled, each buffer will share the message input. Otherwise, each buffer will contain its own message input that will be remembered as the user switches between buffers.
 
 E.g. `”shared_input”: false`
@@ -261,42 +263,42 @@ E.g.
         ...
     }
 
-### server
+=== server
 The IRC server address to connect to. If using a Kiwi server, the server may override this setting transparently.
 
 E.g. `”server”: “irc.example.com”`
 
-### port
+=== port
 The port number to find the IRC server on. If using a Kiwi server, the server may override this setting transparently.
 
 E.g. `”port”: 6667`
 
-### tls
+=== tls
 If enabled, the client will attempt to connect to the IRC server using SSL/TLS. If using a Kiwi server, the server may override this setting transparently.
 
 E.g. `”tls”: false`
 
-### channel
+=== channel
 The channel to join once the IRC connection has successfully be made. More than one channel may be entered being separated by a comma.
 
 E.g. `”channel”: “#chan1,#chan2”`
 
-### nick
+=== nick
 The nickname to use on the IRC server. If it is already in use then a random number will be automatically appended until it connects successfully. A `?` may be used to insert a random number in its place.
 
 E.g. `”nick”: “prawnsalad”`
 
-### direct
+=== direct
 If the IRC server supports websocket connections (TODO link to websocket spec info on webircgateway docs) you may enable this option to ignore the `kiwiServer` setting and connect directly to the IRC server. This will connect to the websocket server set in the normal `server`/`port`/`tls` options.
 
 E.g. `”direct”: false`
 
-### direct_path
+=== direct_path
 If the `direct` option is enabled, the websocket connection will be made to this path.
 
 E.g. `"direct_path": "/path/to/websocket"`
 
-### state_key
+=== state_key
 The user settings and state are saved within their browser (local storage) under a key name. This key may be changed to provide different instances of the client without impacting any existing state they may previously have.
 
 E.g. `”state_key”: “kiwi-state”`
