@@ -53,6 +53,9 @@ Effects:
 
 E.g. `”restricted”: true`
 
+=== showRaw
+If enabled, the raw traffic to and from the IRC servers will be shown in a `*raw` buffer tab.
+
 === hide_advanced
 Setting this to true will hide the advanced settings button from the settings screen. Only the basic settings will be available to the user.
 
