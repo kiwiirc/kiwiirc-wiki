@@ -96,9 +96,7 @@ If set, the sidebar will be shown at start-up with the specified panel.
 Available options:
 
 * `about`
-
 * `nicklist`
-
 * `settings`
 
 E.g. `”sidebarDefault”: "nicklist"`
