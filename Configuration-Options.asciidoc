@@ -90,10 +90,10 @@ If enabled, the send message button will be shown allowing the user to click a b
 
 E.g. `”showSendButton”: false`
 
-=== sidebarPinned
-If enabled, the sidebar that contains the nicklist will be pinned open by default.
+=== sidebarDefault
+If set, the sidebar will be shown at start-up with the specified panel.
 
-E.g. `”sidebarPinned”: false`
+E.g. `”sidebarDefault”: "nicklist"`
 
 === aliases
 Aliases allow you to create custom IRC commands that alias another or chain multiple together with pre-set variables. (TODO: link to dedicated page on aliases)
