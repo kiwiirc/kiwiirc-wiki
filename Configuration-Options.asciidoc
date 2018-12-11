@@ -225,7 +225,7 @@ If enabled, highlight nicknames found in messages with the colour they have been
 E.g. `”colour_nicknames_in_messages”: true`
 
 === block_pms
-If enabled, users will not receive private messages unless they have sent a private message to the sender first.
+If enabled, users will not receive private messages unless they have sent a private message to the sender first. Note: ircops and op's of shared channels are exempt from this block.
 
 E.g. `”block_pms”: false`
 
