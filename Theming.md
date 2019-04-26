@@ -14,9 +14,6 @@ Once these 3 steps are completed, refresh Kiwi IRC in your browser and you shoul
 
 *Tip: You can click the refresh button next to the themes list to re-load your theme CSS without refreshing the page*
 
-## Online theme builder
-There is an online theme builder that lets you test out new theme ideas quickly right in your browser. You can find there here: https://kiwiirc.com/nextclient-themebuilder
-
 ## CSS tips
 Kiwi IRC uses a class naming scheme very similar to BEM. Classes are named in the format `.kiwi-scope-identifier--optional-modifier`. For example, the [message list component](https://github.com/kiwiirc/kiwiirc/blob/master/src/components/MessageList.vue) contains classes such as `.kiwi-messagelist-message` and `.kiwi-messagelist-message--highlight`.
 
