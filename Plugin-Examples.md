@@ -1,5 +1,14 @@
 Quick and dirty plugin examples.
 
+#### Add a custom ident / username to a clients connection
+~~~html
+kiwi.plugin('customident', function(kiwi, log) {
+    kiwi.on('network.connecting', function(event) {
+        event.network.ircClient.options.username = 'custom_ident';
+    });
+});
+~~~
+
 #### Show the nicklist when returning to a channel from closing a query buffer
 ~~~html
 <script>
