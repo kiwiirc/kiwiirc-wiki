@@ -7,7 +7,8 @@ kiwi.plugin('customident', function(kiwi, log) {
     kiwi.on('network.connecting', function(event) {
         event.network.ircClient.options.username = 'custom_ident';
     });
-});</script>
+});
+</script>
 ~~~
 
 #### Show the nicklist when returning to a channel from closing a query buffer
