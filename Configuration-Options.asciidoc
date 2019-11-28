@@ -5,6 +5,12 @@
 = General Settings
 These are the top level settings of the configuration object.
 
+E.g.
+
+    {
+        ...
+    }
+
 === language
 The default language to display the client in. If set to `false`, the language will be automatically determined from the users browser.
 
@@ -189,6 +195,11 @@ The number of messages to keep in the window. The higher this number, the more m
 
 E.g. `”scrollback_size”: 250`
 
+=== show_hostnames
+If enabled, show users hostnames when they join or leave a channel.
+
+E.g. `show_hostnames: false`
+
 === show_joinparts
 If enabled, show when users join or leave a channel.
 
@@ -249,6 +260,11 @@ If enabled, unread message counters next to the channel names will be hidden.
 
 E.g. `”hide_message_counts”: false`
 
+=== show_realnames
+If enabled, show the users real name field next to their nick on supported message layouts.
+
+E.g. `show_realnames: false`
+
 === default_ban_mask
 The default user mask to use when banning a user. `%n`, `%i` and `%h` will be replaced with the selected users nick, ident and hostname respectively.
 
@@ -260,9 +276,29 @@ The default reason to give to a user if you kick them from a channel without one
 E.g. `”default_kick_reason”: “Your behavior is not conducive to the desired environment.”`
 
 === shared_input
-If enabled, each buffer will share the message input. Otherwise, each buffer will contain its own message input that will be remembered as the user switches between buffers.
+If enabled, each buffer will share the message input history. Otherwise, each buffer will contain its own message input history that will be remembered as the user switches between buffers.
 
 E.g. `”shared_input”: false`
+
+=== show_message_info
+If enabled, on touch screen devices you can tap a message to open a menu to reply or view more information about a message.
+
+E.g. `show_message_info: true`
+
+=== who_loop
+On older IRC networks without away-notify support, repeatedly poll the server for everybodies away status. Set this to false to disable this function.
+
+E.g. `who_loop: true`
+
+=== share_typing
+If the IRC server supports IRCv3 message-tags, send and receive users typing statuses to show which users are currently typing a message.
+
+E.g. `share_typing: true`
+
+=== flash_title
+Flash the window or browser tab title when a new message arrives while a different browser tab has focus. Available options are "message" for all messages, "highlight" for highlighted messages only, or "off" to disable the flashing title entirely.
+
+E.g. `"flash_title": "message"`
 
 # Startup screen options
 The startup screen manages how the client starts up. It may add default networks, offer a login form, display custom HTML content or any other things. The startup screen starts the initial IRC connection before telling the client to take over and display the main client interface.
@@ -316,3 +352,8 @@ E.g. `"direct_path": "/path/to/websocket"`
 The user settings and state are saved within their browser (local storage) under a key name. This key may be changed to provide different instances of the client without impacting any existing state they may previously have.
 
 E.g. `”state_key”: “kiwi-state”`
+
+=== nick_format
+If set, a user can only click the connect button if the nickname matches this regex pattern.
+
+E.g. `"nick_format": "[a-z_][a-z_0-9]"`
