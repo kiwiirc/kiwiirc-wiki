@@ -15,7 +15,7 @@ Adding the following into your config.json file will instruct Kiwi IRC to load t
 Inside your .js file, you must register a plugin using the `kiwi.plugin()` call, such as:
 ~~~javascript
 kiwi.plugin('plugin_name', function(kiwi, log) {
-    // Plugin code here
+ | `| Plugin code here |
 });
 ~~~
 
@@ -35,24 +35,34 @@ kiwi.plugin('plugin_name', function(kiwi) {
 ## API
 
 ### window.kiwi.*
-~~~javascript
-.Vue
-.themes
-plugin(pluginName, fn)
-addUi(type, element)
-addTab(name, component, props)
-showTab(name)
-addStartup(name, ctor)
-~~~
+The main API interface
+
+| Property | Description |
+| --- | --- |
+| `.version` | The Kiwi IRC version |
+| `.Vue` | A Vuejs global instance |
+| `.themes` | Theme manager |
+| `.state` | The Kiwi internal application state. Described below |
+| `plugin(pluginName, fn)` | Create a new plugin |
+| `addUi(type, element)` | Extend the Kiwi UI |
+| `addTab(name, component, props)` | Add a custom tab to a section of the UI |
+| `addView(name, component, props)` | Add a custom view (page) |
+| `showView(name)` | Show a view added via addView() |
+| `addStartup(name, ctor)` | Add a new startup screen |
+| `showInSidebar(component)` | Show a view in the sidebar |
+| `replaceModule(module, new_module)` | Replace an module or component |
+| `require(module)` | Get a Kiwi internal module instance |
+| `on(eventName, fn)` | Listen for an application event |
+| `once(eventName, fn)` | Listen for an application event one time only |
+| `off(eventName, fn)` | Stop listening for an application event |
+| `emit(eventName, arg1, arg2)` | Emit an event on the application event bus |
+
 
 
 ### window.kiwi.state.*
-~~~javascript
-$on(eventName, fn)
-$once(eventName, fn)
-$off(eventName, fn)
-$emit(eventName, arg1, arg2)
+The Kiwi internal application state. The entire application uses this interface to modify state such as adding or removing networks, adding buffers / messages / users, getting the active network or buffer.
 
+~~~javascript
 exportState(includeBuffers)
 importState(stateStr)
 resetState()
@@ -93,8 +103,10 @@ getStartups()
 ~~~
 
 
-### kiwi.state events
-These events can be listened for via `kiwi.on('event.name', function() {})`. For events marked that they can be fired from plugins, you may do so via `kiwi.emit('event.name', arg1, arg2)`.
+### Event bus
+This is the main event bus for the application. Events are emitted by many places and some allow you to emit your own so that you can interact with Kiwi.
+
+These events can be listened for via `kiwi.on('event.name', function() {})`. For events marked that they can be fired from plugins, you can do so via `kiwi.emit('event.name', arg1, arg2)`.
 
 | Name | Arguments | Can be fired from plugins | Description |
 | --- | --- | --- | --- |
