@@ -1,6 +1,6 @@
 *Note: This is a living and breathing document. It is still changing and being completed*
 
-This document briefly outlines how to create, register and make use of plugins. Further in depth descriptions will be included once the API has been officially implemented.
+This document briefly outlines how to create, register and make use of plugins. Some small plugin examples can be found on the [[Plugin-Examples]] page for a faster look.
 
 ## Creating a plugin
 A plugin is a single myplugin.js file that can be loaded over HTTP from any location.
