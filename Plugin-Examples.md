@@ -23,3 +23,19 @@ kiwi.plugin('shownicklist', function(kiwi, log) {
 });
 </script>
 ~~~
+
+#### Show IRCCloud avatars
+~~~html
+<script>
+kiwi.on('irc.userlist', function(event, network) {
+    event.users.forEach(function(user) {
+        let m = user.ident.match(/^uid|sid([0-9]+)$/);
+        if (m) {
+            kiwi.state.addUser(network.id, {nick: user.nick, avatar: {
+                small: 'https://static.irccloud-cdn.com/avatar-redirect/' + m[1],
+            }});
+        }
+    });
+});
+</script>
+~~~
