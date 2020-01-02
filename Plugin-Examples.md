@@ -26,14 +26,33 @@ kiwi.plugin('shownicklist', function(kiwi, log) {
 
 #### Show IRCCloud avatars
 ~~~html
+<div id="irccloud_avatars" style="width:1px;height:1px;position:absolute;left:-1000px;"></div>
 <script>
 kiwi.on('irc.userlist', function(event, network) {
+    var scratch = document.querySelector('#irccloud_avatars');
+
     event.users.forEach(function(user) {
-        let m = user.ident.match(/^uid|sid([0-9]+)$/);
+        var m = user.ident.match(/^uid|sid([0-9]+)$/);
         if (m) {
-            kiwi.state.addUser(network.id, {nick: user.nick, avatar: {
-                small: 'https://static.irccloud-cdn.com/avatar-redirect/' + m[1],
-            }});
+            var avatarUrl = 'https://static.irccloud-cdn.com/avatar-redirect/' + m[1];
+            var img = document.createElement('img');
+            img.src = avatarUrl;
+
+            // irccloud replies with a 404 if an avatar doesn't exist, so this onload callback
+            // will only be called for successful avatars
+            img.onload = function() {
+                kiwi.state.addUser(network.id, {nick: user.nick, avatar: {
+                    small: avatarUrl,
+                }});
+
+                scratch.removeChild(img);
+            };
+
+            img.onerror = function() {
+                scratch.removeChild(img);
+            };
+
+            scratch.appendChild(img);
         }
     });
 });
