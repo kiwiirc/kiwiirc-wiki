@@ -24,6 +24,18 @@ kiwi.plugin('shownicklist', function(kiwi, log) {
 </script>
 ~~~
 
+#### Replace reCaptcha with a custom captcha
+~~~html
+<div><button @click.prevent="$emit('ready', true)">Click me</button></div>
+<script>
+kiwi.plugin('mycaptcha', function(kiwi, log) {
+    kiwi.replaceModule('components/Captcha', {
+        template: '#mycaptcha'
+    });
+});
+</script>
+~~~
+
 #### Show IRCCloud avatars
 ~~~html
 <div id="irccloud_avatars" style="width:1px;height:1px;position:absolute;left:-1000px;"></div>
