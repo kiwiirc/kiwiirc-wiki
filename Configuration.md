@@ -25,9 +25,9 @@ Example:
 Loads the JSON file from `static/config.json`
 
 
-## Config options
+## Config format
 
-Config options are put into JSON format using a plain object. Example: `{"option1": "value", "option2": true}`.
+Config options are in JSON format using a plain object. Example: `{"option1": "value", "option2": true}`.
 
 You may either use nested JSON objects or simple dotted notation. These two config files are equivalent:
 ~~~json
@@ -43,9 +43,31 @@ You may either use nested JSON objects or simple dotted notation. These two conf
 }
 ~~~
 
-A full listing of config options can be found [[here|Configuration-Options]]
+#### Dotted notation
+
+Dotted notation is parsed **after** the config is loaded. This makes it easy for configurations that are generated on the fly and overwrite a default configuration.
+
+This means that this:
+~~~json
+{
+    "startupOptions": {
+        "server": "irc.example.com"
+    },
+    "startupOptions.server": "irc.otherserver.com"
+}
+~~~
+ends up being this:
+~~~json
+{
+    "startupOptions": {
+        "server": "irc.otherserver.com"
+    }
+}
+~~~
 
 ## Misc config options
+
+A full listing of config options can be found [[here|Configuration-Options]]
 
 ##### `windowTitle`
 Example: "My IRC network"
