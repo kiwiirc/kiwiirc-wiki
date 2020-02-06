@@ -27,9 +27,25 @@ Loads the JSON file from `static/config.json`
 
 ## Config options
 
-Config options are put into JSON format using a plain object. Example: `{"option1": "value", "option2": "value"}`
+Config options are put into JSON format using a plain object. Example: `{"option1": "value", "option2": true}`.
 
-A full config example mentioning most of the following options can be found [[here|Configuration-Example]]
+You may either use nested JSON objects or simple dotted notation. These two config files are equivalent:
+~~~json
+{
+    "startupOptions": {
+        "server": "irc.example.com"
+    }
+}
+~~~
+~~~json
+{
+    "startupOptions.server": "irc.example.com"
+}
+~~~
+
+A full listing of config options can be found [[here|Configuration-Options]]
+
+## Misc config options
 
 ##### `windowTitle`
 Example: "My IRC network"
