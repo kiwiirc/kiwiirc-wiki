@@ -300,6 +300,26 @@ Flash the window or browser tab title when a new message arrives while a differe
 
 E.g. `"flash_title": "message"`
 
+=== nicklist_avatars
+If a user has an available avatar (set by either a custom plugin or IRC server metadata) then display them in the nicklist.
+
+E.g. `"nicklist_avatars": true`
+
+=== show_link_previews
+URLs converted to links within messages will have a small icon next to it to preview the link directly in the page. This icon can be disabled by setting this to false.
+
+E.g. `"show_link_previews": true`
+
+=== inline_link_previews
+When enabled, clicking the link preview icon within a message will show its preview inline - within the message itself. If disabled, the preview will open at the top of the page and stay there while switching between different channels.
+
+E.g. `"inline_link_previews": true`
+
+=== inline_link_auto_preview_whitelist
+If links sent in a message match this regex pattern, a preview will be automatically shown after the message.
+
+E.g. `"inline_link_auto_preview_whitelist":"/youtube.com|imgur.com/"`
+
 # Startup screen options
 The startup screen manages how the client starts up. It may add default networks, offer a login form, display custom HTML content or any other things. The startup screen starts the initial IRC connection before telling the client to take over and display the main client interface.
 
