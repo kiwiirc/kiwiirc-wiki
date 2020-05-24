@@ -112,6 +112,9 @@ Aliases allow you to create custom IRC commands that alias another or chain mult
 
 E.g. `”aliases”: “/p /part $1”`
 
+=== showColorPicker
+Show or hide the colour palette icon to add colours to messages.
+
 === showEmojiPicker
 Show or hide the emoji picker, defaults to `true`. This is ignored on touchscreen devices where the operating systems default keyboard usually contains a native emoji picker.
 
