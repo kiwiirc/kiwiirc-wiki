@@ -54,8 +54,9 @@ E.g.
 === restricted
 Setting this to true restricts the client to connect only to the IRC server you configure.
 Effects:
-* No extra networks can be added to the client by the user
-* The network settings panel is hidden
+
+- No extra networks can be added to the client by the user
+- The network settings panel is hidden
 
 E.g. `”restricted”: true`
 
@@ -101,9 +102,9 @@ If set, the sidebar will be shown at start-up with the specified panel.
 
 Available options:
 
-* `about`
-* `nicklist`
-* `settings`
+- `about`
+- `nicklist`
+- `settings`
 
 E.g. `”sidebarDefault”: "nicklist"`
 
@@ -164,17 +165,19 @@ E.g.
 === messageLayout
 The default layout for buffers. Traditional IRC clients are more compact and less visual, while a more modern client may be more spacious and easier to read to the general public.
 Available options:
-* `compact`
-* `modern`
+
+- `compact`
+- `modern`
 
 E.g. `”messageLayout”: “compact”`
 
 === alert_on
 When the user should be alerted on receiving a message.
 Available options:
-* `message` alert on every message.
-* `highlight` alert each time somebody mentions the user or any of their extra highlight words.
-* `never` never alert the user.
+
+- `message` alert on every message.
+- `highlight` alert each time somebody mentions the user or any of their extra highlight words.
+- `never` never alert the user.
 
 E.g. `”alert_on”: “highlight”`
 
@@ -321,7 +324,7 @@ E.g. `"inline_link_auto_previews": true`
 === inline_link_auto_preview_whitelist
 If links sent in a message match this regex pattern, a preview will be automatically shown after the message.
 
-E.g. `"inline_link_auto_preview_whitelist":"youtube.com|imgur.com"`
+E.g. `"inline_link_auto_preview_whitelist": "youtube.com|imgur.com"`
 
 # Startup screen options
 The startup screen manages how the client starts up. It may add default networks, offer a login form, display custom HTML content or any other things. The startup screen starts the initial IRC connection before telling the client to take over and display the main client interface.
