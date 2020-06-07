@@ -17,5 +17,5 @@ This guide will explain updating the Kiwi IRC frontend client only.
 
 3. Reconfigure the server webroot
 
-   Edit `/etc/kiwiirc/config.conf` and change the `weboot` option to `/var/www/kiwiirc/`.
+   Edit `/etc/kiwiirc/config.conf` and change the `webroot` option to `/var/www/kiwiirc/`.
    Restart Kiwi IRC, usually with `systemctl restart kiwiirc`.
