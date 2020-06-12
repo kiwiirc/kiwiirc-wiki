@@ -1,4 +1,3 @@
-# reCaptcha / hCpatcha
 Kiwi IRC can support either reCaptcha or hCaptcha and can always ask for verification or based on dnsbl response
 
 ## reCaptcha
