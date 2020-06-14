@@ -70,3 +70,15 @@ kiwi.on('irc.userlist', function(event, network) {
 });
 </script>
 ~~~
+
+## Popular community plugins
+
+#### Social features such as user age, sex, location options
+https://github.com/ItsOnlyBinary/kiwiirc-plugin-asl
+
+A more complete plugin with its own build process.
+
+#### Resizing the message font size
+https://github.com/CoryChaplin/kiwiirc-plugins/blob/master/font_size.html
+
+A simple .html format plugin
