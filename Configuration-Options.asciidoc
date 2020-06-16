@@ -272,7 +272,7 @@ If enabled, show the users real name field next to their nick on supported messa
 E.g. `show_realnames: false`
 
 === default_ban_mask
-The default user mask to use when banning a user. `%n`, `%i` and `%h` will be replaced with the selected users nick, ident and hostname respectively.
+When no other automated way can be found to ban a user this user mask will be used. `%n`, `%i` and `%h` will be replaced with the selected users nick, ident and hostname respectively.
 
 E.g. `”default_ban_mask”: “*!%i@%h”`
 
