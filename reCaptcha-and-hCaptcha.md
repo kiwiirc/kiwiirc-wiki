@@ -35,7 +35,7 @@ required = true
 ### config.json
 ```
 "startupOptions" : {
-    "recaptchaURL": "https://hcaptcha.com/1/api.js",
+    "recaptchaUrl": "https://hcaptcha.com/1/api.js",
     "recaptchaSiteId": "SITE KEY HERE",
 }
 ```
