@@ -317,7 +317,7 @@ URLs converted to links within messages will have a small icon next to it to pre
 E.g. `"show_link_previews": true`
 
 === inline_link_auto_previews
-When enabled, links that match the below whitelist will be automatically shown underneath the message.
+When enabled, a preview of the link will be automatically shown underneath the message.
 
 E.g. `"inline_link_auto_previews": true`
 
