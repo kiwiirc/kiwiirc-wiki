@@ -375,7 +375,7 @@ If the `direct` option is enabled, the websocket connection will be made to this
 E.g. `"direct_path": "/path/to/websocket"`
 
 === state_key
-The user settings and state are saved within their browser (local storage) under a key name. This key may be changed to provide different instances of the client without impacting any existing state they may previously have.
+The user settings and state are saved within their browser (local storage) under a key name. This key may be changed to provide different instances of the client without impacting any existing state they may previously have. Setting to `false` will disable any storage.
 
 E.g. `”state_key”: “kiwi-state”`
 
