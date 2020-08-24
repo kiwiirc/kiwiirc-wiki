@@ -110,6 +110,7 @@ These events can be listened for via `kiwi.on('event.name', function() {})`. For
 
 | Name | Arguments | Can be fired from plugins | Description |
 | --- | --- | --- | --- |
+| `ready` | | no | Kiwi has loaded and ready to show the startup screen |
 | `document.clicked` | MouseEvent | no | The page has its `click` event triggered |
 | `document.keydown` | KeyboardEvent | no | The page has its `keydown` event triggered |
 | `active.component` | VueComponent | yes | Set the active component in the main view |
