@@ -153,6 +153,12 @@ See www.embedly.com for more information on this.
 E.g. `”embedly” { “key”: “my_api_key” }`
 
 
+=== noticeActiveBuffer
+If true, forward all notices to the active buffer if one exists. Otherwise, all notices will be added to the server tab.
+
+E.g. `"noticeActiveBuffer": true,`
+
+
 # Buffer Settings
 The following settings must be within the `buffer` object of the configuration.
 
