@@ -15,7 +15,7 @@ Adding the following into your config.json file will instruct Kiwi IRC to load t
 Inside your .js file, you must register a plugin using the `kiwi.plugin()` call, such as:
 ~~~javascript
 kiwi.plugin('plugin_name', function(kiwi, log) {
- | `| Plugin code here |
+    // Plugin code here
 });
 ~~~
 
