@@ -121,6 +121,11 @@ Show or hide the emoji picker, defaults to `true`. This is ignored on touchscree
 
 E.g. `"showEmojiPicker": true,`
 
+=== showAwayStatusIndicators
+Show or hide away status indicators on user avatars, defaults to `true`.
+
+E.g. `"showAwayStatusIndicators": true,`
+
 === emojis
 An object to replace emoticon strings with emoji characters. The emoji character is represented by its Unicode value.
 
