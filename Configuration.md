@@ -184,7 +184,7 @@ The text that is shown on the connect button on the startup page. HTML may also 
 
 
 ##### `startupOptions.infoContent`
-Example: "Welcome to my network! Please visit my homepage for help."
+Example: "Welcome to my network! Please visit my <a href='/home' target='_blank'>homepage</a> for help."
 
 The HTML content that is shown on the right side of the startup page.
 
