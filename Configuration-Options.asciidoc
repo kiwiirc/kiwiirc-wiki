@@ -393,4 +393,4 @@ E.g. `”state_key”: “kiwi-state”`
 === nick_format
 If set, a user can only click the connect button if the nickname matches this regex pattern.
 
-E.g. `"nick_format": "[a-z_][a-z_0-9]"`
+E.g. `"nick_format": "/[a-z_][a-z_0-9]/"`
